@@ -1,10 +1,10 @@
 import Todo from "./Todo";
 import NewForm from "./NewForm";
 
-const EditableTodo = () => {
+const EditableTodo = ({todo}) => {
   return (
     <>
-      <Todo />
+      <Todo todo={todo}/>
       <NewForm />
     </>
   );

@@ -1,8 +1,12 @@
 import EditableTodo from "./EditableTodo";
 
-const TodoList = () => {
+const TodoList = ({todoList}) => {
   return (
-    <EditableTodo />
+    <>
+    {todoList.map((todo, index) => 
+      <EditableTodo todo={todo} key={index}/>
+    )}
+    </>
   );
 }
 

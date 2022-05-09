@@ -1,10 +1,10 @@
 
-const Todo = ({ title, description, priority }) => {
-
+const Todo = ({ todo }) => {
+  console.log("TODO COMPONENT:", todo);
   return (
     <>
-      <h3> {title} (priority: {priority})</h3>
-      <p> {description}</p>
+      <h3> {todo.title} (priority: {todo.priority})</h3>
+      <p> {todo.description}</p>
     </>
   )
 };
