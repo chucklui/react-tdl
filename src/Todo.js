@@ -1,7 +1,11 @@
 
-const Todo = () => {
+const Todo = ({ title, description, priority }) => {
+
   return (
-    <p>Todo</p>
+    <>
+      <h3> {title} (priority: {priority})</h3>
+      <p> {description}</p>
+    </>
   )
 };
 
