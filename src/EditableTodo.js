@@ -1,11 +1,11 @@
 import Todo from "./Todo";
-import NewForm from "./NewForm";
+import TodoForm from "./TodoForm";
 
 const EditableTodo = ({todo}) => {
   return (
     <>
       <Todo todo={todo}/>
-      <NewForm />
+      {/* <TodoForm /> */}
     </>
   );
 }

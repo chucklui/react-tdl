@@ -1,5 +1,6 @@
+import {useState} from 'react';
 import TopTodo from "./TopTodo";
-import NewForm from "./NewForm";
+import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 
 const TODOLIST = [
@@ -9,11 +10,17 @@ const TODOLIST = [
 ];
 
 const TodoApp = () => {
+  const [todoData, setTodoData] = useState(TODOLIST);
+
+  function updateTodoData(todo) {
+    setTodoData((td) => ([...td, todo]));
+  }
+
   return (
     <>
       {/* <TopTodo /> */}
-      <TodoList todoList={TODOLIST}/>
-      {/* <NewForm /> */}
+      <TodoList todoList={todoData}/>
+      <TodoForm updateTodoData={updateTodoData}/>
     </>
   );
 };
