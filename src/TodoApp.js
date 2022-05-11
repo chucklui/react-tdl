@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import TopTodo from "./TopTodo";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
@@ -9,6 +9,9 @@ const TODOLIST = [
   { title: "Go to bed", description: "get some sleep", priority: 3 },
 ];
 
+
+
+
 const TodoApp = () => {
   const [todoData, setTodoData] = useState(TODOLIST);
 
@@ -18,9 +21,9 @@ const TodoApp = () => {
 
   return (
     <>
-      {/* <TopTodo /> */}
-      <TodoList todoList={todoData}/>
-      <TodoForm updateTodoData={updateTodoData}/>
+      <TopTodo todoData={todoData}/>
+      {/* <TodoList todoList={todoData}/> */}
+      {/* <TodoForm updateTodoData={updateTodoData}/> */}
     </>
   );
 };

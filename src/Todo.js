@@ -1,6 +1,7 @@
 
 const Todo = ({ todo }) => {
   console.log("TODO COMPONENT:", todo);
+  
   return (
     <>
       <h3> {todo.title} (priority: {todo.priority})</h3>
