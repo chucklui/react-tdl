@@ -10,7 +10,11 @@ const TopTodo = ({todoData}) => {
   console.log('TopTodo Component', getTopPriority(todoData));
 
   return (
-    <Todo todo={getTopPriority(todoData)}/>
+    <>
+    <h1>Top Todo</h1>
+
+    {todoData.length > 0 ? <Todo todo={getTopPriority(todoData)}/> : <p>No Top Todo!</p>}
+    </>
   )
 };
 

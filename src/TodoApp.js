@@ -24,7 +24,7 @@ const TodoApp = () => {
 
   return (
     <>
-      <TodoList todoList={todoData} deleteTodo={deleteTodo}/> 
+      <TodoList todoList={todoData} deleteTodo={deleteTodo} updateTodoData={updateTodoData}/> 
       <TopTodo todoData={todoData}/>
       <TodoForm updateTodoData={updateTodoData}/>
     </>
