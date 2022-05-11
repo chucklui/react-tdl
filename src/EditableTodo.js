@@ -28,7 +28,7 @@ const EditableTodo = ({ todo, deleteTodo, updateTodoData }) => {
           </button>
         </div>
       )}
-      {isEdit && <TodoForm updateTodoData={updateTodoData} todoData={todo} setIsEdit={setIsEdit} />}
+      {isEdit && <TodoForm todoData={todo} updateTodoData={updateTodoData}/>}
     </>
   );
 };

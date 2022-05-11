@@ -14,7 +14,7 @@ const TODOLIST = [
 const TodoApp = () => {
   const [todoData, setTodoData] = useState(TODOLIST);
 
-  function updateTodoData(todo) {
+  function addTodoData(todo) {
     setTodoData((td) => ([...td, todo]));
   }
 
@@ -22,11 +22,20 @@ const TodoApp = () => {
     setTodoData((tds) => tds.filter((td) =>(td.id !== tdId)));
   }
 
+  function updateTodoData(data){
+    let id = data.id;
+    let temp = todoData.map(function(td){
+      if(td.id === id) td = data;
+      return td;
+    });
+    setTodoData(temp);
+  }
+
   return (
     <>
       <TodoList todoList={todoData} deleteTodo={deleteTodo} updateTodoData={updateTodoData}/> 
       <TopTodo todoData={todoData}/>
-      <TodoForm updateTodoData={updateTodoData}/>
+      <TodoForm addTodoData={addTodoData}/>
     </>
   );
 };
